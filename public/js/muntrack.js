@@ -32,7 +32,7 @@ var bigTimer = null;
 var list = 0;
 var quorum = null;
 var current = [0, 0, 0];
-var title = "mun.track";
+var title = "Siegel High Model UN";
 var names = ["Rolling", "General", "Voting"];
 var times = [0, 0, 0];
 var countries = [[], [], []];
@@ -133,7 +133,7 @@ $(document).ready(function() {
 	$("#command").keydown(keydownHandler);
 	$("#command").keyup(function() {
 		if (isCountryPrompt && isPrompt && $(this).val().length > 3) {
-			print(findCountry($(this).val()));
+			print(input);
 		}
 	});
 	$("body").mouseup(function() {
@@ -514,7 +514,7 @@ function boot() {
 
 function add(input) {
 	if (input != "quit" && input != "q") {
-		countries[list].push(findCountry(input));
+		countries[list].push(input);
 		generateList();
 
 		prompt("add? (q to exit)", add);
@@ -557,7 +557,7 @@ function change(input) {
 }
 
 function changeTo(input) {
-	countries[list][country-1] = findCountry(input);
+	countries[list][country-1] = (input);
 	generateList();
 }
 
@@ -586,7 +586,7 @@ function flipper(input) {
 }
 
 function insert(input) {
-	country = findCountry(input);
+	country = (input);
 
 	prompt("insert where?", insertWhere);
 }
@@ -662,22 +662,6 @@ function generateList() {
 	if (countries[list].length > 0 && $("#speaker-list li.current").length > 0) {
 		$("#speaker-list").scrollTo($("#speaker-list li.current"));
 	}
-}
-
-function findCountry(input) {
-    if (input.length > 20) return input;
-    var min = 5;
-    var country = input;
-
-    for (var i = 0; i < countryList.length; i++) {
-      ld = levenshtein(input, countryList[i]);
-      if (ld < min) {
-      	min = ld;
-        country = countryList[i];
-      }
-    }
-
-	return country;
 }
 
 function levenshtein(a, b) {
