@@ -1,12 +1,12 @@
 # mun.track
 
-mun.track is a Model UN committee dashboard.
+mun.track is a Model UN committee dashboard. (modified for use by SHS Model UN)
 
 ![mun.track dasbhoard](https://cloud.githubusercontent.com/assets/882976/3309208/09b35bbc-f695-11e3-9607-065d622b8033.png)
 
 ### Try it now!
 
-<a href="http://muntrackapp.com">
+<a href="http://mosierap.duckdns.org:3000">
   <img src="https://cloud.githubusercontent.com/assets/882976/3309253/4ef545ae-f696-11e3-80ce-6ae6a58fdefa.png">
 </a>
 
@@ -67,7 +67,7 @@ of what your delegates can see.
 
 We love contributions! See [CONTRIBUTING](CONTRIBUTING.md).
 
-[muntrack]: http://muntrackapp.com
+[muntrack]: http://mosierap.duckdns.org:3000
 
 ## License
 
